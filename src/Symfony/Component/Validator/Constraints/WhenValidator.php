@@ -34,7 +34,6 @@ final class WhenValidator extends ConstraintValidator
         $variables['value'] = $value;
         $variables['this'] = $context->getObject();
         $variables['context'] = $context;
-        $variables['root'] = $context->getRoot();
 
         if ($this->getExpressionLanguage()->evaluate($constraint->expression, $variables)) {
             $context->getValidator()->inContext($context)
