@@ -104,7 +104,7 @@ final class WhenValidatorTest extends ConstraintValidatorTestCase
         $this->expectValidateValue(0, $number->value, $constraints);
 
         $this->validator->validate($number->value, new When([
-            'expression' => 'context.root.ok === true',
+            'expression' => 'context.getRoot().ok === true',
             'constraints' => $constraints,
         ]));
     }
